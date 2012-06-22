@@ -69,11 +69,17 @@ ul#topMenu li a, #topMenu li a:link {
 }
 
 #pageContainer .centerContainer {
-	position:relative
+	position:relative;
+	padding-bottom:40px
 }
 
 .page {
-	margin:95px 200px 0 140px
+	padding:0;
+	border:1px dotted orange
+}
+
+.pageContent {
+	padding:95px 200px 0 140px
 }
 
 .heading {
@@ -93,6 +99,16 @@ ul#topMenu li a, #topMenu li a:link {
 	font-size:22px
 }
 
+.content {
+	position:relative;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#666;
+	line-height:19px
+}
+
+/* page1 */
+
 #page1 h1 {
 	width:600px
 }
@@ -102,19 +118,106 @@ ul#topMenu li a, #topMenu li a:link {
 	color:#f90
 }
 
-#page1 #content {
-	position:relative;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:15px;
-	color:#666;
-	line-height:19px
-}
-
-#page1 #content p {
+#page1 .content p {
 	padding-left:380px;
 	width:240px;
 	height:400px;
 	background:transparent url(../img/devices.png) -30px 0 no-repeat
+}
+
+/* page2 */
+
+#page2 h1 {
+	width:420px
+}
+
+#page2 h2 {
+	width:600px;
+	color:#b93294
+}
+
+#page2 .content p {
+	width: 570px
+}
+
+#page2 .channelLineup {
+	margin-top:40px;
+	width:605px;
+	height:75px;
+	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	border:1px solid #ccc
+}
+
+/* page3 */
+
+#page3 h1 {
+	width:420px
+}
+
+#page3 h2 {
+	width:600px;
+	color:#f90
+}
+
+#page3 .content {
+	width:680px;
+	height:250px;
+	background:transparent url(../img/streaming-devices.png) 160px 0 no-repeat
+}
+
+#page3 .content p {
+	width: 270px
+}
+
+#page3 .content p.caption {
+	font-size:12px;
+	width: 160px;
+	margin:67px 0 0 110px;
+	color:#999;
+	line-height:14px
+}
+
+#page3 .channelLineup {
+	margin-top:40px;
+	width:605px;
+	height:75px;
+	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	border:1px solid #ccc
+}
+
+/* page4 */
+
+#page4 h1 {
+	width:450px
+}
+
+#page4 h2 {
+	width:600px;
+	color:#6c0
+}
+
+#page4 h3 {
+	margin-bottom:20px;
+	font:"Gotham Medium";
+	font-size:15px
+}
+
+#page4 .content {
+	width:680px;
+	height:300px;
+	background:transparent url(../img/on-demand-devices.png) 230px 0 no-repeat
+}
+
+#page4 .content p {
+	width: 270px
+}
+
+#page4 .content p.caption {
+	font-size:12px;
+	width: 200px;
+	margin:45px 0 0 277px;
+	color:#999;
+	line-height:14px
 }
 
 #mainMenu {
@@ -136,8 +239,8 @@ ul#nav {
 	float:right;
 	clear:right;
 	display:block;
-	margin:0;
-	padding:23px 30px 0 0;
+	margin:0 30px 0 0;
+	padding:23px 0 0 0;
 	width:171px;
 	background:transparent url(../img/nav-background.png) top left no-repeat;
 	list-style-type:none;
