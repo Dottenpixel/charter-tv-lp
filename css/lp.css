@@ -1,0 +1,321 @@
+#topMenu {
+	margin:0;
+	padding:0;
+	position:fxed;
+	top:0;
+	left:0;
+	width:100%;
+	height:40px;
+	background:#fff url(../img/top-bar-gradient.jpg) top left repeat-x;
+	text-align:right;
+	list-style-type:none;
+	z-index:2000
+}
+
+.centerContainer {
+	margin:0 auto;
+	width:1000px;
+}
+
+#top {
+	margin:0;
+	padding:0;
+	text-align:right;
+	list-style-type:none
+}
+
+#topMenu li {
+	display:inline-block;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#666
+}
+
+#topMenu li:last-child {
+	padding-right:0;
+}
+
+#topMenu li a, #topMenu li a:link {
+	display:inline-block;
+	margin:0;
+	padding:11px 9px 11px 20px;
+	font-size:12px;
+	color:#09f;
+	text-decoration:none;
+	background:transparent url(../img/top-nav-arrow.gif) 3px 13px no-repeat
+}
+
+#topMenu li a:hover {
+	text-decoration:underline
+}
+
+#nav{
+	list-style:none;
+	position:fixed;
+	right:20px;
+	z-index:500;
+	margin:0 30px 0 0;
+	padding:23px 0 0 0;
+	width:171px;
+	background:transparent url(../img/nav-background.png) top left no-repeat
+}
+
+#nav li, #nav div {
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	width:148px
+}
+
+#nav a:link, #nav a:visited {
+	display:block;
+	padding:12px 0 11px 10px;
+	font:"Gotham Bold";
+	font-size:12px;
+	font-weight:bold;
+	color:#999;
+	text-decoration:none;
+	text-align:left
+}
+
+#nav a:hover {
+	background:#000;
+	color:#fff
+}
+
+#nav a.active {
+	background:#000;
+	color:#fff;
+	cursor:default
+}
+
+#nav a.active:hover {
+	background:#000;
+	color:#fff
+}
+
+#nav div a:link, #nav div a:visited {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px -1px 0px 0px #ffffff;
+	background-image:-webkit-gradient( linear, left top, left bottom, color-stop(0, #d87200), color-stop(1, #ff9900) );
+	background-image:-moz-linear-gradient( center top, #d87200 0%, #ff9900 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d87200', endColorstr='#ff9900');
+	background-color:#f90;
+	border:2px solid #f90;
+	display:block;
+	margin-top:42px;
+	padding-left:0;
+	color:#fff;
+	font:"Gotham Bold";
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	text-shadow:0 5px 5px #666
+}
+
+.page {
+	background: transparent 50% 0 no-repeat fixed;
+	background-size: 100% auto;
+	height: 1000px;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0;
+}
+.content {
+	font-size: 48px;
+	font-weight: bold;
+	font-family: sans-serif;
+	margin: 0 auto;
+	min-width: 980px;
+	overflow: visible;
+	width: 980px;
+	color: #fff;
+	padding: 0;
+}
+
+.heading {
+	margin-bottom:20px
+}
+
+.page h1 {
+	font:"Gotham Medium";
+	font-size:48px;
+	font-weight:500;
+	text-transform:uppercase;
+	line-height:43px
+}
+
+.page h2 {
+	font:"Gotham Bold";
+	font-size:22px
+}
+
+.copy {
+	position:relative;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#666;
+	line-height:19px
+}
+
+/* intro */
+
+#intro h1 {
+	width:600px
+}
+
+#intro h2 {
+	width:600px;
+	color:#f90
+}
+
+#intro .copy p {
+	padding-left:380px;
+	width:240px;
+	height:400px;
+	background:transparent url(../img/devices.png) -30px 0 no-repeat
+}
+
+/* first */
+
+#first h1 {
+	width:420px
+}
+
+#first h2 {
+	width:600px;
+	color:#b93294
+}
+
+#first .copy p {
+	width: 570px
+}
+
+#first .channelLineup {
+	margin-top:40px;
+	width:605px;
+	height:75px;
+	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	border:1px solid #ccc
+}
+
+/* second */
+
+#second h1 {
+	width:420px
+}
+
+#second h2 {
+	width:600px;
+	color:#f90
+}
+
+#second .copy {
+	width:680px;
+	height:250px;
+	background:transparent url(../img/streaming-devices.png) 160px 0 no-repeat
+}
+
+#second .copy p {
+	width: 270px
+}
+
+#second .copy p.caption {
+	font-size:12px;
+	width: 160px;
+	margin:67px 0 0 110px;
+	color:#999;
+	line-height:14px
+}
+
+#second .channelLineup {
+	margin-top:40px;
+	width:605px;
+	height:75px;
+	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	border:1px solid #ccc
+}
+
+/* third */
+
+#third h1 {
+	width:450px
+}
+
+#third h2 {
+	width:600px;
+	color:#6c0
+}
+
+#third h3 {
+	margin-bottom:20px;
+	font:"Gotham Medium";
+	font-size:15px
+}
+
+#third .copy {
+	width:680px;
+	height:300px;
+	background:transparent url(../img/on-demand-devices.png) 230px 0 no-repeat
+}
+
+#third .copy p {
+	width: 270px
+}
+
+#third .copy p.caption {
+	font-size:12px;
+	width: 200px;
+	margin:45px 0 0 277px;
+	color:#999;
+	line-height:14px
+}
+
+/* fourth */
+
+.bg {
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	width: 75%;
+	background: 50% 0 repeat fixed;
+}
+
+#intro {
+	
+}
+#intro .bg {
+	
+}
+#first {
+	background-image: url(../img/first-bg-trans.png);
+}
+#first .bg {
+	
+}
+#second {
+	background-image: url(../img/second-bg-trans.png);
+}
+#second .bg {
+	
+}
+#third {
+	background-image: url(../img/third-bg-trans.png);
+}
+#third .bg {
+	
+}
+#fourth {
+	background-image: url(../img/fourth-bg-trans.png);
+}
+#fourth .bg {
+	
+}
+#fifth {
+	
+}
+#fifth .bg {
+	
+}

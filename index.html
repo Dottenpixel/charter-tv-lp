@@ -4,8 +4,9 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head>
+<!--[if gt IE 8]><!-->
+<html class=" js no-flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
     <!-- Use the .htaccess and remove these lines to avoid edge case issues.
@@ -21,127 +22,159 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
     <link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/style.css">
-	
+    <link rel="stylesheet" href="css/lp.css">
+
     <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
 
     <!-- All JavaScript at the bottom, except this Modernizr build.
          Modernizr enables HTML5 elements & feature detects for optimal performance.
          Create your own custom Modernizr build: www.modernizr.com/download/ -->
-    <script src="js/vendor/modernizr-2.5.3.min.js"></script>
-	<script src="js/jquery.scrollTo-min.js"></script>
+    <script src="js/ga.js"></script><script src="js/modernizr-2.js"></script>
 </head>
 <body>
-	<div id="top">
-		<div class="centerContainer">
-			<ul id="topMenu">
-				<li><a href="#">View your channel lineup</a>|</li>
-				<li><a href="#">See helpful TV tips</a>|</li>
-				<li><a href="#">Watch our TV spots</a></li>
-			</ul>
-		</div>
-	</div>
-	<div id="pageContainer">
-		<div class="centerContainer">
-			<div id="mainMenu">
-				<img src="img/charter-logo.png" width="151" height="57" id="logo" />
-				<ul id="nav">
-					<li><a href="#" onClick="moveToPosition(0)" class="active">The Future of TV</a></li>
-					<li><a href="#" onClick="moveToPosition(1)">Free HD</a></li>
-					<li><a href="#" onClick="moveToPosition(2)">TV Everywhere</a></li>
-					<li><a href="#" onClick="moveToPosition(3)">Charter On Demand</a></li>
-					<li><a href="#" onClick="moveToPosition(4)">Charter DVR<sup>&reg;</sup></a></li>
-					<li><a href="#" onClick="moveToPosition(5)">The Future Is Now</a></li>
-					<li><a href="#">Order Charter</a></li>
-				</ul>
-			</div>
-			<div id="page1" class="page">
-				<div class="pageContent">
-					<div class="heading">
-						<h1>Welcome to the Future of TV.</h1>
-						<h2>Entertainment is better when it’s everywhere.</h2>
-					</div>
-					
-					<div class="content">
-						<p>Charter is transforming the way you experience TV by enhancing every aspect of entertainment. With 100+ HD channels, 10,000+ On Demand options, 3D movies On Demand, multi-device streaming and more powerful DVRs, there are now more ways than ever to Let It All In.</p>
-					</div>
-				</div>
-			</div>
-			<div id="page2" class="page">
-				<div class="pageContent">
-					<div class="heading">
-						<h1>A WHOLE NEW LEVEL OF HI-DEF.</h1>
-						<h2>Now get 100+ HD channels. All for FREE.</h2>
-					</div>
-					
-					<div class="content">
-						<p>The future is having your cake and eating it, too. You can now enjoy a huge selection of HD channels featuring the best shows, movies, sports and more, plus anytime HD access with 1,500+ HD On Demand options. And the best part? <b>HD is FREE with your Charter TV&reg; service.</b></p>
-					</div>
-					
-					<div class="channelLineup"></div>
-				</div>
-			
-			</div>
-			<div id="page3" class="page">
-				<div class="pageContent">
-					<div class="heading">
-						<h1>WATCH TV<br />ON ANY SCREEN.</h1>
-						<h2>Stream more channels on all your devices.</h2>
-					</div>
-					
-					<div class="content">
-						<p>Add some excitement to your smart devices with free downloadable apps that let you stream your favorite shows on your smartphone, tablet or computer.</p>
-						<p class="caption">True Blood&reg; on HBO GO&reg;. HBO GO is free (or included at no additional cost) with your HB&reg; subscription.</p>
-						
-						<div class="channelLineup"></div>
-					</div>
-				</div>
-			</div>
-			<div id="page4" class="page">
-				<div class="pageContent">
-					<div class="heading">
-						<h1>ONE CHANNEL TO RULE THEM ALL.</h1>
-						<h2>Thousands of options On Demand, all on Channel 1.</h2>
-					</div>
-					
-					<div class="content">
-						<h3>10,000+ On Demand options<br />1,500+ HD On Demand options<br />3D On Demand<br />Premiums On Demand</h3>
-						<p>Just go to Channel 1 and thousands of popular shows, blockbuster movies, exclusive content and even 3D movies are all available to you—instantly.</p>
-						<p>See what&rsquo;s On Demand</p>
-						<p class="caption">Fast Five on Cinemax&reg;. Cinemax is a subscription serviceand is required to view programming.</p>
-					</div>
-				</div>
-			</div>
-			<div id="page5" class="page">
-				<div class="pageContent">
-					<div class="heading">
-						<h1>READY, SET, RECORD.</h1>
-						<h2>Thousands of options On Demand, all on Channel 1.</h2>
-					</div>
-					
-					<div class="content">
-						<h3>10,000+ On Demand options<br />1,500+ HD On Demand options<br />3D On Demand<br />Premiums On Demand</h3>
-						<p>Just go to Channel 1 and thousands of popular shows, blockbuster movies, exclusive content and even 3D movies are all available to you—instantly.</p>
-						<p>See what&rsquo;s On Demand</p>
-						<p class="caption">Fast Five on Cinemax&reg;. Cinemax is a subscription serviceand is required to view programming.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-		
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
          chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
     <!-- Add your site or application content here -->
+	<ul id="topMenu">
+		<div class="centerContainer">
+			<li><a href="#">View your channel lineup</a>|</li>
+			<li><a href="#">See helpful TV tips</a>|</li>
+			<li><a href="#">Watch our TV spots</a></li>
+		</div>
+	</ul>
+	
+    <ul style="top: 209px;" id="nav">
+		<li><a href="#intro" title="The Future of TV" class="active">The Future of TV</a></li>
+		<li><a href="#first" title="Free HD">Free HD</a></li>
+		<li><a href="#second" title="TV Everywhere">TV Everywhere</a></li>
+		<li><a href="#third" title="Charter On Demand">Charter On Demand</a></li>
+		<li><a href="#fourth" title="Charter DVR">Charter DVR<sup>&reg;</sup></a></li>
+		<li><a href="#fifth" title="The Future Is Now">The Future Is Now</a></li>
+		<div><a href="#" title="Order Charter">Order Charter</a></div>
+    </ul>
 
+    <div id="intro" class="page">
+        <div class="content">
+            <!--
+			<div style="height: 642px" class="bg"></div>
+			-->
+            <div class="heading">
+				<h1>Welcome to the Future of TV.</h1>
+				<h2>Entertainment is better when it’s everywhere.</h2>
+			</div>
+			
+			<div class="copy">
+				<p>Charter is transforming the way you experience TV by enhancing every aspect of entertainment. With 100+ HD channels, 10,000+ On Demand options, 3D movies On Demand, multi-device streaming and more powerful DVRs, there are now more ways than ever to Let It All In.</p>
+			</div>
+			
+        </div>
+    </div>
+    <div style="background-position: 50%;" id="first" class="page">
+		<div class="centerContainer">
+			<div class="content">
+				<!--
+				<div style="height: 642px" class="bg"></div>
+				-->
+				
+				<div class="heading">
+					<h1>A WHOLE NEW LEVEL OF HI-DEF.</h1>
+					<h2>Now get 100+ HD channels. All for FREE.</h2>
+				</div>
+				
+				<div class="copy">
+					<p>The future is having your cake and eating it, too. You can now enjoy a huge selection of HD channels featuring the best shows, movies, sports and more, plus anytime HD access with 1,500+ HD On Demand options. And the best part? <b>HD is FREE with your Charter TV&reg; service.</b></p>
+				</div>
+				
+				<div class="channelLineup"></div>
+				
+			</div>
+		</div>
+    </div>
+    <div style="background-position: 50%;" id="second" class="page">
+		<div class="centerContainer">
+			<div class="content">
+				<!--
+				<div style="height: 642px" class="bg"></div>
+				-->
+				
+				<div class="heading">
+					<h1>WATCH TV<br />ON ANY SCREEN.</h1>
+					<h2>Stream more channels on all your devices.</h2>
+				</div>
+				
+				<div class="copy">
+					<p>Add some excitement to your smart devices with free downloadable apps that let you stream your favorite shows on your smartphone, tablet or computer.</p>
+					<p class="caption">True Blood&reg; on HBO GO&reg;. HBO GO is free (or included at no additional cost) with your HB&reg; subscription.</p>
+					
+					<div class="channelLineup"></div>
+				</div>
+				
+			</div>
+		</div>
+    </div>
+    <div style="background-position: 50%;" id="third" class="page">
+		<div class="centerContainer">
+			<div class="content">
+				<!--
+				<div style="height: 642px" class="bg"></div>
+				-->
+				
+				<div class="heading">
+					<h1>ONE CHANNEL TO RULE THEM ALL.</h1>
+					<h2>Thousands of options On Demand, all on Channel 1.</h2>
+				</div>
+				
+				<div class="copy">
+					<h3>10,000+ On Demand options<br />1,500+ HD On Demand options<br />3D On Demand<br />Premiums On Demand</h3>
+					<p>Just go to Channel 1 and thousands of popular shows, blockbuster movies, exclusive content and even 3D movies are all available to you—instantly.</p>
+					<p>See what&rsquo;s On Demand</p>
+					<p class="caption">Fast Five on Cinemax&reg;. Cinemax is a subscription serviceand is required to view programming.</p>
+				</div>
+					
+			</div>
+		</div>
+    </div>
+    <div style="background-position: 50%;" id="fourth" class="page">
+		<div class="centerContainer">
+			<div class="content">
+				<!--
+				<div style="height: 642px" class="bg"></div>
+				-->
+				
+				<div class="heading">
+					<h1>READY, SET, RECORD.</h1>
+					<h2>Thousands of options On Demand, all on Channel 1.</h2>
+				</div>
+				
+				<div class="copy">
+					<h3>10,000+ On Demand options<br />1,500+ HD On Demand options<br />3D On Demand<br />Premiums On Demand</h3>
+					<p>Just go to Channel 1 and thousands of popular shows, blockbuster movies, exclusive content and even 3D movies are all available to you—instantly.</p>
+					<p>See what&rsquo;s On Demand</p>
+					<p class="caption">Fast Five on Cinemax&reg;. Cinemax is a subscription serviceand is required to view programming.</p>
+				</div>
+				
+			</div>
+		</div>
+    </div>
+    <div id="fifth" class="page">
+        <div class="content">
+            <!--
+			<div style="height: 642px" class="bg"></div>
+			-->
+			
+        </div>
+    </div>
 
     <!-- JavaScript at the bottom for fast page loading: http://developer.yahoo.com/performance/rules.html#js_bottom -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery_002.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery_003.js"></script>
+    <script type="text/javascript" src="js/jquery_004.js"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script src="js/plugins.js"></script>
@@ -156,5 +189,6 @@
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
-</body>
-</html>
+
+
+</body></html>

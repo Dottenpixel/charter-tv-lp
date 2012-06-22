@@ -1,37 +1,21 @@
-/* Author:
+$(document).ready(function(){
+	$(".page, .bg").css({ height : $(window).height() });
 
-*/
-var yPositions = [];
-var pages = document.getElementsByClassName('page');
-$(document).ready(function(e)
-{
-	alert($('html,body'));
-	var height = $(window).height();
-	var topMenuHeight = $(document.getElementById('top')).height();
-	for (var i = 0; i < pages.length; i++)
-	{
-		var page = $(pages[i]);
-		page.css('height', height - topMenuHeight);
-	}
+	$('#nav').localScroll(800);
 	
-	storePositions();
-});
+	RepositionNav();
+	
+	$(window).resize(function(){
+		RepositionNav();
+	});	
+	
+	//.parallax(xPosition, adjuster, inertia, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//adjuster - y position to start from
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro, #first, #second, #third, #fourth').parallax("50%", 0, 0.1, true);
+	$('#first .bg').parallax("25%", 2500, 0.5, true);
+	$('#fourth .bg').parallax("25%", 2500, 0.5, true);
 
-function storePositions()
-{
-	for (var i = 0; i < pages.length; i++)
-	{
-		var page = $(pages[i]);
-		var position = page.position();
-		yPositions.push(position.top)
-	}
-}
-
-function moveToPosition(index)
-{
-	var pageContainer = $(document.getElementById('pageContainer'));
-	var centerContainers = $(document.getElementsByClassName('centerContainer'));
-	var centerContainer = $(centerContainers[2]);
-	yPosition = yPositions[index];
-	$('html,body').scrollTo(-yPosition);
-}
+})
