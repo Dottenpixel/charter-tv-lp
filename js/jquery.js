@@ -77,6 +77,7 @@ function inView(pos, element){
 		}
 		
 		$window.bind('scroll', function(){ //when the user is scrolling...
+			console.log($this.attr("id"), $this.offset().top);
 			var pos = $window.scrollTop(); //position of the scrollbar
 			inView(pos, $this);
 			
