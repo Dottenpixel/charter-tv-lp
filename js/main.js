@@ -1,5 +1,12 @@
 $(document).ready(function(){
 	$(".page, .bg").css({ height : $(window).height() });
+	$(".page .content").each(function(i,n){
+		$(this).css({ 
+			marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
+			paddingTop : (function(me){ console.log(me.height()); return "+" + ($(window).height() - me.height())/2 + "px"; })($(n))
+		});
+	});
+
 
 	$('#nav').localScroll(800);
 	
