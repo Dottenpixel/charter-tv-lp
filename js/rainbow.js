@@ -34,7 +34,7 @@ $(document).ready(function(){
 	tl.append(t1);
 	tl.append(t2);
 	tl.append(t3);
-	tl.stop();
+	tl.play();
 	$("#intro .rainbow-layer button[name='play']").click(function(){ tl.play(); });
 	$("#intro .rainbow-layer button[name='reverse']").click(function(){ tl.reverse(); });
 

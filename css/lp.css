@@ -43,7 +43,6 @@ nav {
 	text-align:right;
 	list-style-type:none;
 	z-index:2000;
-	display: none;
 }
 
 .centerContainer {
@@ -369,39 +368,65 @@ nav li a:hover {
 #intro .rainbow-layer .rainbow1 {
 	position: absolute;
 	left: 692px;
-    height: 200px;
+    height: 110px;
 }
 #intro .rainbow-layer .rainbow2 {
 	position: absolute;
-	top: 40px;
-	left: 31px;
-    width: 664px;
+	top: 60px;
+	left: 30px;
+    width: 662px;
 }
 #intro .rainbow-layer .rainbow3 {
 	position: absolute;
-	top: 80px;
-	left: 31px;
+	top: 110px;
+	left: 30px;
     height: 200px;
+}
+#intro .rainbow-layer .rainbow1 .beam {
+	float: right;
 }
 #intro .rainbow-layer .rainbow2 .beam {
 	float: right;
 	clear: both;
+	background-image: url(../img/rainbow_beam_shade_r.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#intro .rainbow-layer .rainbow3 .beam {
+	background-image: url(../img/rainbow_beam_shade_t.png);
+	background-repeat: no-repeat;
+	background-position: left top;
 }
 .vert .beam {
     height: 1px;
-    width: 12px;
+    width: 5px;
     float: left;
 }
 .horz .beam {
-    height: 12px;
+    height: 5px;
     width: 0px;
 }
-.red { background-color: red; }
-.orange { background-color: orange; }
-.yellow { background-color: yellow; }
-.green { background-color: green; }
-.blue { background-color: blue; }
-.indigo { background-color: indigo; }
-.violet { background-color: violet; }
+.corner {
+	position: absolute;
+	z-index: 200;
+}
+.horz .corner {
+	top: 0;
+	left: 0;
+}
+.vert .corner {
+	right: 0;
+	bottom: 0;
+}
+.magenta { background-color: #b93294; }
+.green { background-color: #7bc143; }
+.yellow { background-color: #efea12; }
+.red { background-color: #f16250; }
+.lt-green { background-color: #ecf1b4; }
+.blue { background-color: #1fa2dc; }
+.orange { background-color: #f68933; }
+.gold { background-color: #ffca0b; }
+.lt-blue { background-color: #7ed1f4; }
+.dk-green { background-color: #19ab4b; }
 
 ​
