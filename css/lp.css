@@ -360,13 +360,32 @@ nav li a:hover {
 /* RAINBOWS */
 
 .rainbow-layer {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 1000px;
+	margin: 0 auto;
 }
 #intro .rainbow-layer .rainbow1 {
+	position: absolute;
+	left: 692px;
     height: 200px;
+}
+#intro .rainbow-layer .rainbow2 {
+	position: absolute;
+	top: 40px;
+	left: 31px;
+    width: 664px;
+}
+#intro .rainbow-layer .rainbow3 {
+	position: absolute;
+	top: 80px;
+	left: 31px;
+    height: 200px;
+}
+#intro .rainbow-layer .rainbow2 .beam {
+	float: right;
+	clear: both;
 }
 .vert .beam {
     height: 1px;
