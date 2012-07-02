@@ -20,6 +20,7 @@ $(document).ready(function(){
 	$('#second').parallax("50%", 0, 0.1, true);
 	$('#third').parallax("50%", 0, 0.1, true);
 	$('#fourth').parallax("50%", 0, 0.1, true);
+	$('#fifth').parallax("50%", 0, 0.1, true);
 	// $('#first .bg').parallax("25%", 2500, 0.5, true);
 	// $('#fourth .bg').parallax("25%", 2500, 0.5, true);
 
