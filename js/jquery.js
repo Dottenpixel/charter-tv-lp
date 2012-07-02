@@ -35,21 +35,27 @@ function inView(pos, element){
 		}else{
 			var height = element.height();
 		}
-		
+		var whereAmI = "";
 		//above & in view
 		if(top + height >= pos && top + height - windowHeight < pos){
+			whereAmI = "above";
 			move(pos, height);
 		}
 				
 		//full view
-		if(top <= pos && (top + height) >= pos && (top - windowHeight) < pos && top + height - windowHeight > pos){
+		if(top <= pos && (top + height) >= pos && (top - windowHeight) <= pos && top + height - windowHeight >= pos){
+			whereAmI = "full";
 			move(pos, height);
 		}
 		
 		//below & in view
 		if(top + height > pos && top - windowHeight < pos && top > pos){
+			whereAmI = "below";
 			move(pos, height);
 		}
+		console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
+		console.log($this.attr("id"), whereAmI);
+		console.log("________________________");
 	});
 }		
 		
@@ -77,7 +83,7 @@ function inView(pos, element){
 		}
 		
 		$window.bind('scroll', function(){ //when the user is scrolling...
-			console.log($this.attr("id"), $this.offset().top);
+			console.log($this.attr("id"), $window.scrollTop(), $this.offset().top);
 			var pos = $window.scrollTop(); //position of the scrollbar
 			inView(pos, $this);
 			
