@@ -161,11 +161,13 @@ nav li a:hover {
 	font-weight: bold;
 	font-family: sans-serif;
 	margin: 0 auto;
-	min-width: 980px;
 	overflow: visible;
-	width: 980px;
 	color: #fff;
 	padding: 40px 0 0 0;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	width: 620px;
 }
 
 .heading {
@@ -180,12 +182,15 @@ nav li a:hover {
 	font-size:48px;
 	font-weight:500;
 	text-transform:uppercase;
-	line-height:43px
+	line-height:43px;
+	margin: 0;
 }
 
 .page h2 {
 	font-family: GothamBold, Helvetica, Arial, sans-serif;
-	font-size:22px
+	font-size:22px;
+	font-weight: normal;
+	margin: 3px 0 8px 0;
 }
 
 .copy {
@@ -216,12 +221,8 @@ nav li a:hover {
 
 /* first */
 
-#first h1 {
-	width:420px
-}
 
 #first h2 {
-	width:600px;
 	color:#b93294
 }
 
@@ -362,41 +363,48 @@ nav li a:hover {
 	position: relative;
 	top: 0;
 	left: 0;
-	width: 1000px;
+	width: 980px;
 	margin: 0 auto;
 }
-#intro .rainbow-layer .rainbow1 {
+.rainbow-layer .rainbow1 {
 	position: absolute;
 	left: 692px;
     height: 110px;
 }
-#intro .rainbow-layer .rainbow2 {
+.rainbow-layer .rainbow2 {
 	position: absolute;
 	top: 60px;
 	left: 30px;
     width: 662px;
 }
-#intro .rainbow-layer .rainbow3 {
+.rainbow-layer .rainbow3 {
 	position: absolute;
-	top: 110px;
+	top: 0px;
 	left: 30px;
-    height: 200px;
+    height: 1000px;
 }
-#intro .rainbow-layer .rainbow1 .beam {
+#intro .rainbow-layer .rainbow3 {
+	top: 110px;
+}
+
+.rainbow-layer .rainbow1 .beam {
 	float: right;
 }
-#intro .rainbow-layer .rainbow2 .beam {
+.rainbow-layer .rainbow2 .beam {
 	float: right;
 	clear: both;
 	background-image: url(../img/rainbow_beam_shade_r.png);
-	background-repeat: no-repeat;
 	background-position: right top;
 }
 #intro .rainbow-layer .rainbow3 .beam {
 	background-image: url(../img/rainbow_beam_shade_t.png);
-	background-repeat: no-repeat;
 	background-position: left top;
 }
+
+.beam {
+	background-repeat: no-repeat;
+}
+
 .vert .beam {
     height: 1px;
     width: 5px;
