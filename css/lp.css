@@ -42,7 +42,8 @@ nav {
 	background:#fff url(../img/top-bar-gradient.jpg) top left repeat-x;
 	text-align:right;
 	list-style-type:none;
-	z-index:2000
+	z-index:2000;
+	display: none;
 }
 
 .centerContainer {
@@ -165,7 +166,7 @@ nav li a:hover {
 	overflow: visible;
 	width: 980px;
 	color: #fff;
-	padding: 0;
+	padding: 40px 0 0 0;
 }
 
 .heading {
@@ -355,3 +356,33 @@ nav li a:hover {
 #fifth .bg {
 	
 }
+
+/* RAINBOWS */
+
+.rainbow-layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#intro .rainbow-layer .rainbow1 {
+    height: 200px;
+}
+.vert .beam {
+    height: 1px;
+    width: 12px;
+    float: left;
+}
+.horz .beam {
+    height: 12px;
+    width: 0px;
+}
+.red { background-color: red; }
+.orange { background-color: orange; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+.blue { background-color: blue; }
+.indigo { background-color: indigo; }
+.violet { background-color: violet; }
+
+​
