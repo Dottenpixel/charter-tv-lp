@@ -36,25 +36,29 @@ function inView(pos, element){
 			var height = element.height();
 		}
 		var whereAmI = "";
+		var posPct;
 		//above & in view
 		if(top + height >= pos && top + height - windowHeight < pos){
 			whereAmI = "above";
+			posPct = Math.round(pos/(top+height)*100)+"%";
 			move(pos, height);
 		}
 				
 		//full view
 		if(top <= pos && (top + height) >= pos && (top - windowHeight) <= pos && top + height - windowHeight >= pos){
 			whereAmI = "full";
+			console.log($this.attr("id"), whereAmI);
 			move(pos, height);
 		}
 		
 		//below & in view
 		if(top + height > pos && top - windowHeight < pos && top > pos){
 			whereAmI = "below";
+			posPct = 100-Math.round(pos/top*100)+"%";
 			move(pos, height);
 		}
 		console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
-		console.log($this.attr("id"), whereAmI);
+		console.log($this.attr("id"), whereAmI, posPct);
 		console.log("________________________");
 	});
 }		
