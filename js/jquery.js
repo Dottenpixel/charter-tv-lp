@@ -50,7 +50,8 @@ function inView(pos, element){
 			whereAmI = "full";
 			console.log($this.attr("id"), whereAmI);
 			move(pos, height);
-			$this.trigger("play_rb");
+			$this.trigger("play_rb")
+			$("#nav").trigger("page_change", $this.attr("id"));
 		}
 		
 		//below & in view
@@ -60,6 +61,7 @@ function inView(pos, element){
 			posPct = Math.round(-(pos-top)/height*100); //how much is hidden?
 			move(pos, height);
 			posPct < 50 ? $this.trigger("play_rb") : $this.trigger("rev_rb");
+			if (posPct < 25) $("#nav").trigger("page_change", $this.attr("id"));
 		}
 		console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
 		console.log($this.attr("id"), whereAmI, posPct + "%");
