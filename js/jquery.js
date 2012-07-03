@@ -50,6 +50,7 @@ function inView(pos, element){
 			whereAmI = "full";
 			console.log($this.attr("id"), whereAmI);
 			move(pos, height);
+			$this.trigger("play_rb");
 		}
 		
 		//below & in view

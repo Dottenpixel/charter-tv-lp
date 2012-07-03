@@ -55,5 +55,6 @@ $(document).ready(function(){
 	makePageVertRainbow( $("#second") );
 	makePageVertRainbow( $("#third") );
 	makePageVertRainbow( $("#fourth") );
+	makePageVertRainbow( $("#fifth") );
 
 });
