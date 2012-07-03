@@ -40,7 +40,8 @@ function inView(pos, element){
 		//above & in view
 		if(top + height >= pos && top + height - windowHeight < pos){
 			whereAmI = "above";
-			posPct = Math.round(pos/(top+height)*100);
+			posPct = Math.round((pos-top)/height*100); //how much is hidden?
+			// posPct = Math.round(pos/(top+height)*100);
 			move(pos, height);
 		}
 				
@@ -54,7 +55,8 @@ function inView(pos, element){
 		//below & in view
 		if(top + height > pos && top - windowHeight < pos && top > pos){
 			whereAmI = "below";
-			posPct = 100-Math.round(pos/top*100);
+			// posPct = 100-Math.round(pos/top*100);
+			posPct = Math.round(-(pos-top)/height*100); //how much is hidden?
 			move(pos, height);
 			posPct < 50 ? $this.trigger("play_rb") : $this.trigger("rev_rb");
 		}
