@@ -232,7 +232,7 @@ nav li a:hover {
 	margin-top:40px;
 	width:605px;
 	height:75px;
-	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
 	border:1px solid #ccc
 }
 
@@ -269,8 +269,8 @@ nav li a:hover {
 	margin-top:40px;
 	width:605px;
 	height:75px;
-	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
 	border:1px solid #ccc;
+	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
 }
 
 /* third */

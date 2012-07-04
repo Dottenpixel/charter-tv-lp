@@ -12,6 +12,10 @@ $(document).ready(function(){
 		$("a", this).removeClass("active").filter("[href='#"+pId+"']").addClass("active");
 		console.log(e, pId);
 	});
+	
+	var hd_carousel = new TimelineMax({ repeat: -1 }); //2019px is the width of the background image
+	hd_carousel.append( TweenMax.to( $('#first .channelLineup'), 40, { css: { backgroundPositionX: "-2091px" }, ease: Linear.easeNone }));
+	hd_carousel.play();
 
 	RepositionNav();
 	
