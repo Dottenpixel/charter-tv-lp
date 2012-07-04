@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$("a", this).removeClass("active").filter("[href='#"+pId+"']").addClass("active");
 		console.log(e, pId);
 	});
-	
+
 	RepositionNav();
 	
 	$(window).resize(function(){

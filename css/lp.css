@@ -197,6 +197,10 @@ nav li a:hover {
 
 /* intro */
 
+#intro .heading {
+	margin-top: 60px;
+}
+
 #intro h1 {
 	width:600px
 }
@@ -206,7 +210,7 @@ nav li a:hover {
 	color:#f90
 }
 
-#intro .copy p {
+#intro .copy {
 	padding-left:380px;
 	width:240px;
 	height:400px;
@@ -266,7 +270,7 @@ nav li a:hover {
 	width:605px;
 	height:75px;
 	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
-	border:1px solid #ccc
+	border:1px solid #ccc;
 }
 
 /* third */
@@ -312,6 +316,25 @@ nav li a:hover {
 	position: absolute;
 	width: 75%;
 	background: 50% 0 repeat fixed;
+}
+
+
+/* fifth */
+
+#fifth h1 {
+	width:600px
+}
+
+#fifth h2 {
+	width:600px;
+	color:#f90
+}
+
+#fifth .copy {
+	padding-left:380px;
+	width:240px;
+	height:400px;
+	background:transparent url(../img/devices.png) -30px 0 no-repeat
 }
 
 #intro {
