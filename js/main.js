@@ -3,7 +3,7 @@ $(document).ready(function(){
 		$(".page, .bg").css({ height : $(window).height() });
 		$(".page .content").each(function(i,n){
 			$(this).css({ 
-				marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
+				//marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
 				paddingTop : (function(me){ console.log(me.height()); return "+" + ($(window).height() - me.height())/2 + "px"; })($(n))
 			});
 		});
@@ -60,12 +60,12 @@ $(document).ready(function(){
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 	//#intro, #first, #second, #third, #fourth
-	$('#intro').parallax("50%", 0, 0.1, true);
-	$('#first').parallax("50%", 0, 0.1, true);
-	$('#second').parallax("50%", 0, 0.1, true);
-	$('#third').parallax("50%", 0, 0.1, true);
-	$('#fourth').parallax("50%", 0, 0.1, true);
-	$('#fifth').parallax("50%", 0, 0.1, true);
+	$('#intro').parallax("50%", 0, 0.3, true);
+	$('#first').parallax("50%", $(window).height()*2, 0.3, true);
+	$('#second').parallax("50%", $(window).height()*3, 0.3, true);
+	$('#third').parallax("50%", $(window).height()*4, 0.3, true);
+	$('#fourth').parallax("50%", $(window).height()*5, 0.3, true);
+	$('#fifth').parallax("50%", $(window).height()*6, 0.3, true);
 	// $('#first .bg').parallax("25%", 2500, 0.5, true);
 	// $('#fourth .bg').parallax("25%", 2500, 0.5, true);
 
