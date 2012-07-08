@@ -29,7 +29,22 @@ font-weight: normal;
 font-style: normal;
 }
 
+a, a:visited {
+	color: #09f;
+	text-decoration: none;
+}
 
+a:hover {
+	color: #06e;
+	text-decoration: underline;
+}
+
+.content .copy p.small {
+	font-size: 10px;
+	width: 400px;
+	padding: 0;
+	line-height: 12px;
+}
 
 nav.top {
 	margin:0;
@@ -73,8 +88,6 @@ nav.top li a, nav.top li a:link {
 	margin:0;
 	padding:11px 9px 11px 20px;
 	font-size:12px;
-	color:#09f;
-	text-decoration:none;
 	background:transparent url(../img/top-nav-arrow.gif) 3px 13px no-repeat
 }
 
@@ -193,7 +206,7 @@ nav.floating .cta a:hover {
 	position:relative;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:15px;
-	color:#666;
+	color:#999;
 	line-height:19px
 }
 
@@ -241,12 +254,15 @@ nav.floating .cta a:hover {
 }
 
 #second .copy {
-	height:250px;
 	background:transparent url(../img/streaming-devices.png) 160px 0 no-repeat
 }
 
 #second .copy p {
 	width: 270px
+}
+
+#second .copy p.small {
+	width: 550px
 }
 
 #second .copy p.caption {
@@ -255,6 +271,21 @@ nav.floating .cta a:hover {
 	margin:67px 0 0 110px;
 	color:#999;
 	line-height:14px
+}
+
+.carousel_header {
+	font-weight: normal;
+	font-size: 15px;
+	margin: 25px 0 3px 0;
+	width: 605px;
+}
+
+.carousel_header p {
+	float: left;
+	margin: 0;
+}
+.carousel_header a {
+	float: right;
 }
 
 #second .channelLineup {
@@ -269,23 +300,26 @@ nav.floating .cta a:hover {
 	position: absolute;
 	top: 0;
 	display: block;
-	width: 25px;
+	width: 30px;
 	height: 75px;
+	background: #fff url(../img/sprite.png) no-repeat;
 }
 .carousel_advance.left {
 	left: 0;
+	background-position: 0px -120px;
 }
 .carousel_advance.right {
-	left: 580px;
+	left: 575px;
+	background-position: -30px -120px;	
 }
 
 #second .channelLineup .carousel_area {
 	position: absolute;
 	overflow: hidden;
 	height:75px;
-	width: 555px;
+	width: 545px;
 	top: 0;
-	left: 25px;
+	left: 30px;
 }
 .carousel.apps .app_links {
 	position: absolute;
@@ -300,9 +334,22 @@ nav.floating .cta a:hover {
 	width: 60px;
 	height: 60px;
 	background: red;
-	margin: 0 30px;
+	margin: 7px 15px;
 	font-size: 24px;
+	background: transparent no-repeat;
+	background-image: url(../img/sprite.png), url(../img/sprite.png), url(../img/sprite.png);
 }
+
+.carousel.apps .app_links a.btn2go 			{ background-position: 0px 0px, -120px 0px, -60px 0px; }
+.carousel.apps .app_links a.cnn 			{ background-position: 0px 0px, -180px 0px, -60px 0px; }
+.carousel.apps .app_links a.epix 			{ background-position: 0px 0px, -240px 0px, -60px 0px; }
+.carousel.apps .app_links a.espn3 			{ background-position: 0px 0px, -300px 0px, -60px 0px; }
+.carousel.apps .app_links a.hbogo 			{ background-position: 0px 0px, -360px 0px, -60px 0px; }
+.carousel.apps .app_links a.maxgo 			{ background-position: 0px 0px, -420px 0px, -60px 0px; }
+.carousel.apps .app_links a.tbs 			{ background-position: 0px 0px, -480px 0px, -60px 0px; }
+.carousel.apps .app_links a.tnt 			{ background-position: 0px 0px, -540px 0px, -60px 0px; }
+.carousel.apps .app_links a.toon 			{ background-position: 0px 0px, -600px 0px, -60px 0px; }
+.carousel.apps .app_links a.trutv 			{ background-position: 0px 0px, -660px 0px, -60px 0px; }
 
 /* third */
 

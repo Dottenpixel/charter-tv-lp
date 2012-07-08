@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	$(".page, .bg").css({ height : $(window).height() });
-	$(".page .content").each(function(i,n){
-		$(this).css({ 
-			marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
-			paddingTop : (function(me){ console.log(me.height()); return "+" + ($(window).height() - me.height())/2 + "px"; })($(n))
+	var positionContent = function() {
+		$(".page, .bg").css({ height : $(window).height() });
+		$(".page .content").each(function(i,n){
+			$(this).css({ 
+				marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
+				paddingTop : (function(me){ console.log(me.height()); return "+" + ($(window).height() - me.height())/2 + "px"; })($(n))
+			});
 		});
-	});
+	}
 
 
 	$('nav.floating').localScroll(800).bind("page_change", function(e, pId){
@@ -44,10 +46,11 @@ $(document).ready(function(){
 		TweenMax.to( carousel, .5, { css: { left: distance }, overwrite: false });
 	});
 	
-
+	positionContent();
 	RepositionNav();
 	
 	$(window).resize(function(){
+		positionContent();
 		RepositionNav();
 	});	
 	
