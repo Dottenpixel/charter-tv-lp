@@ -87,8 +87,8 @@ nav li a:hover {
 	position:fixed;
 	right:20px;
 	z-index:500;
-	margin:0 30px 0 0;
-	padding:23px 0 0 0;
+	margin: 0 30px 0 0;
+	padding: 24px 0 0 0;
 	width:171px;
 	background:transparent url(../img/nav-background.png) top left no-repeat
 }
@@ -97,55 +97,51 @@ nav li a:hover {
 	margin:0;
 	padding:0;
 	margin-left:23px;
-	width:148px
+	width:148px;
 }
 
 #nav a:link, #nav a:visited {
 	display:block;
-	padding:12px 0 11px 10px;
+	padding: 0 0 0 10px;
 	font-family: GothamBold, Helvetica, Arial, sans-serif;
-	font-size:12px;
-	font-weight:bold;
-	color:#999;
-	text-decoration:none;
-	text-align:left
+	font-size: 12px;
+	font-weight:normal;
+	color: #999;
+	text-decoration: none;
+	text-align: left;
+	line-height: 38px;
+	background: rgba(0,0,0,.1);
 }
 
 #nav a:hover {
-	background:#000;
+	background: rgba(0,0,0,.33);
 	color:#fff
 }
 
-#nav a.active {
+#nav a.active, #nav a.active:hover  {
 	background:#000;
-	color:#fff;
-	cursor:default
+	color: #fff;
+	cursor: default
 }
 
-#nav a.active:hover {
-	background:#000;
-	color:#fff
-}
-
-#nav div a:link, #nav div a:visited {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px -1px 0px 0px #ffffff;
-	background-image:-webkit-gradient( linear, left top, left bottom, color-stop(0, #d87200), color-stop(1, #ff9900) );
-	background-image:-moz-linear-gradient( center top, #d87200 0%, #ff9900 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d87200', endColorstr='#ff9900');
-	background-color:#f90;
-	border:2px solid #f90;
+#nav .cta a:link, #nav div a:visited {
 	display:block;
 	margin-top:42px;
-	padding-left:0;
+	padding: 0;
 	color:#fff;
+	background: #f90 url(../img/nav_cta.png) no-repeat top left;
 	font-family: GothamBold, Helvetica, Arial, sans-serif;
 	font-size:14px;
-	font-weight:bold;
+	line-height: 47px;
+	font-weight:normal;
+	text-transform: uppercase;
 	text-align:center;
 	text-decoration:none;
-	text-shadow:0 5px 5px #666
+	text-shadow:0 3px 3px rgba(0,0,0,.33);
+}
+
+#nav .cta a:hover {
+	text-shadow:0 4px 4px rgba(0,0,0,.66);
 }
 
 .page {
@@ -158,8 +154,6 @@ nav li a:hover {
 }
 .content {
 	font-size: 48px;
-	font-weight: bold;
-	font-family: sans-serif;
 	margin: 0 auto;
 	overflow: visible;
 	color: #fff;
@@ -167,7 +161,7 @@ nav li a:hover {
 	display: inline-block;
 	position: relative;
 	left: 50%;
-	width: 620px;
+	width: 650px;
 }
 
 .heading {
@@ -203,6 +197,10 @@ nav li a:hover {
 
 /* intro */
 
+#intro .heading {
+	margin-top: 60px;
+}
+
 #intro h1 {
 	width:600px
 }
@@ -212,7 +210,7 @@ nav li a:hover {
 	color:#f90
 }
 
-#intro .copy p {
+#intro .copy {
 	padding-left:380px;
 	width:240px;
 	height:400px;
@@ -234,7 +232,7 @@ nav li a:hover {
 	margin-top:40px;
 	width:605px;
 	height:75px;
-	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
+	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
 	border:1px solid #ccc
 }
 
@@ -271,8 +269,8 @@ nav li a:hover {
 	margin-top:40px;
 	width:605px;
 	height:75px;
-	background:transparent url(../img/channel-lineup-logos.jpg) top left no-repeat;
-	border:1px solid #ccc
+	border:1px solid #ccc;
+	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
 }
 
 /* third */
@@ -318,6 +316,25 @@ nav li a:hover {
 	position: absolute;
 	width: 75%;
 	background: 50% 0 repeat fixed;
+}
+
+
+/* fifth */
+
+#fifth h1 {
+	width:600px
+}
+
+#fifth h2 {
+	width:600px;
+	color:#f90
+}
+
+#fifth .copy {
+	padding-left:380px;
+	width:240px;
+	height:400px;
+	background:transparent url(../img/devices.png) -30px 0 no-repeat
 }
 
 #intro {
