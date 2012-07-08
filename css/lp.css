@@ -145,13 +145,13 @@ nav.floating a.active, nav.floating a.active:hover  {
 
 nav.floating .cta a:link, nav.floating .cta a:visited {
 	display:block;
-	margin-top:42px;
+	margin-top:37px;
 	padding: 0;
 	color:#fff;
-	background: #f90 url(../img/nav_cta.png) no-repeat top left;
+	background: #f90 url(../img/sprite.png) no-repeat 0px -195px;
 	font-family: GothamBold, Helvetica, Arial, sans-serif;
 	font-size:14px;
-	line-height: 47px;
+	line-height: 50px;
 	font-weight:normal;
 	text-transform: uppercase;
 	text-align:center;
@@ -409,7 +409,16 @@ nav.floating .logo a {
 	width: 75%;
 	background: 50% 0 repeat fixed;
 }
-
+#fourth h2 {
+	color: #16a0d9;
+}
+#fourth .copy {
+	height: 308px;
+	background: transparent url(../img/content-background-fourth.png) 250px 0 no-repeat
+}
+#fourth .copy p {
+	width: 245px;
+}
 
 /* fifth */
 
