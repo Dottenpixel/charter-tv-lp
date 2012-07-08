@@ -8,7 +8,7 @@ $(document).ready(function(){
 	});
 
 
-	$('#nav').localScroll(800).bind("page_change", function(e, pId){
+	$('nav.floating').localScroll(800).bind("page_change", function(e, pId){
 		$("a", this).removeClass("active").filter("[href='#"+pId+"']").addClass("active");
 		console.log(e, pId);
 	});

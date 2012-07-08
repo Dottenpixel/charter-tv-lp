@@ -31,7 +31,7 @@ font-style: normal;
 
 
 
-nav {
+nav.top {
 	margin:0;
 	padding:0;
 	position:fixed;
@@ -57,18 +57,18 @@ nav {
 	list-style-type:none
 }
 
-nav li {
+nav.top li {
 	display:inline-block;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:13px;
 	color:#666
 }
 
-nav li:last-child {
+nav.top li:last-child {
 	padding-right:0;
 }
 
-nav li a, nav li a:link {
+nav.top li a, nav.top li a:link {
 	display:inline-block;
 	margin:0;
 	padding:11px 9px 11px 20px;
@@ -78,29 +78,31 @@ nav li a, nav li a:link {
 	background:transparent url(../img/top-nav-arrow.gif) 3px 13px no-repeat
 }
 
-nav li a:hover {
+nav.top li a:hover {
 	text-decoration:underline
 }
 
-#nav{
-	list-style:none;
+nav.floating {
 	position:fixed;
-	right:20px;
 	z-index:500;
+}
+
+nav.floating ul {
+	list-style:none;
 	margin: 0 30px 0 0;
 	padding: 24px 0 0 0;
 	width:171px;
 	background:transparent url(../img/nav-background.png) top left no-repeat
 }
 
-#nav li, #nav div {
+nav.floating li, nav.floating div {
 	margin:0;
 	padding:0;
 	margin-left:23px;
 	width:148px;
 }
 
-#nav a:link, #nav a:visited {
+nav.floating a:link, nav.floating a:visited {
 	display:block;
 	padding: 0 0 0 10px;
 	font-family: GothamBold, Helvetica, Arial, sans-serif;
@@ -113,18 +115,18 @@ nav li a:hover {
 	background: rgba(0,0,0,.1);
 }
 
-#nav a:hover {
+nav.floating a:hover {
 	background: rgba(0,0,0,.33);
 	color:#fff
 }
 
-#nav a.active, #nav a.active:hover  {
+nav.floating a.active, nav.floating a.active:hover  {
 	background:#000;
 	color: #fff;
 	cursor: default
 }
 
-#nav .cta a:link, #nav div a:visited {
+nav.floating .cta a:link, nav.floating div a:visited {
 	display:block;
 	margin-top:42px;
 	padding: 0;
@@ -140,7 +142,7 @@ nav li a:hover {
 	text-shadow:0 3px 3px rgba(0,0,0,.33);
 }
 
-#nav .cta a:hover {
+nav.floating .cta a:hover {
 	text-shadow:0 4px 4px rgba(0,0,0,.66);
 }
 
