@@ -492,6 +492,22 @@ nav.floating .logo a {
 	top: 110px;
 }
 
+#fifth .rainbow-layer .rainbow2 {
+	top: 382px;
+	left: 80px;
+	width: 735px;
+}
+
+#fifth .rainbow-layer .rainbow3 {
+	height: auto;
+}
+
+#fifth .rainbow-layer .rainbow2 .beam {
+	float: left;
+	background-image: url(../img/rainbow_beam_shade_l.png);
+	background-position: left top;
+}
+
 .rainbow-layer .rainbow1 .beam {
 	float: right;
 }
