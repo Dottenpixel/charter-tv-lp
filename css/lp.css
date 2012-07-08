@@ -143,7 +143,7 @@ nav.floating a.active, nav.floating a.active:hover  {
 	cursor: default
 }
 
-nav.floating .cta a:link, nav.floating div a:visited {
+nav.floating .cta a:link, nav.floating .cta a:visited {
 	display:block;
 	margin-top:42px;
 	padding: 0;
