@@ -17,6 +17,34 @@ $(document).ready(function(){
 	hd_carousel.append( TweenMax.to( $('#first .channelLineup'), 40, { css: { backgroundPositionX: "-2091px" }, ease: Linear.easeNone }));
 	hd_carousel.play();
 
+	$(".carousel_advance").bind("click", function(e){
+		e.preventDefault();
+		var carousel = $('#second .channelLineup .app_links');
+		
+		//cancel click if tweening is in progress
+		if (TweenMax.isTweening(carousel)) { return false; }
+		
+		var linksHtml = carousel.html();
+		var carouselPos = function() { return $("#second .channelLineup .app_links").css("left"); }
+		var distance;
+		//console.log( carouselPos(), carousel.width() );
+		if( $(this).hasClass("left") ) {
+			//console.log( carouselPos(), carousel.children().length );
+			if( parseFloat(carouselPos()) <= -($(".carousel.apps .app_links").width()-$(".carousel.apps .carousel_area").width()-120) ) {
+				carousel.append( linksHtml );
+			};
+			distance = "-=120px";
+		} else {
+			if( parseFloat(carouselPos()) >= 0 ) {
+				carousel.append( linksHtml );
+				carousel.css("left", "-=1200px");
+			};
+			distance = "+=120px";
+		}
+		TweenMax.to( carousel, .5, { css: { left: distance }, overwrite: false });
+	});
+	
+
 	RepositionNav();
 	
 	$(window).resize(function(){

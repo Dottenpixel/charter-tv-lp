@@ -266,11 +266,50 @@ nav li a:hover {
 }
 
 #second .channelLineup {
-	margin-top:40px;
+	position: relative;
 	width:605px;
 	height:75px;
 	border:1px solid #ccc;
-	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
+	background: white;
+}
+
+.carousel_advance {
+	position: absolute;
+	top: 0;
+	display: block;
+	width: 25px;
+	height: 75px;
+}
+.carousel_advance.left {
+	left: 0;
+}
+.carousel_advance.right {
+	left: 580px;
+}
+
+#second .channelLineup .carousel_area {
+	position: absolute;
+	overflow: hidden;
+	height:75px;
+	width: 555px;
+	top: 0;
+	left: 25px;
+}
+.carousel.apps .app_links {
+	position: absolute;
+	width: auto;
+	left: 0px;
+	white-space: nowrap;
+	font-size: 0;
+}
+
+.carousel.apps .app_links a {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background: red;
+	margin: 0 30px;
+	font-size: 24px;
 }
 
 /* third */
