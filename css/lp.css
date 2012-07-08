@@ -240,10 +240,20 @@ nav.floating .logo a {
 }
 
 #intro .copy {
-	padding-left:380px;
-	width:240px;
+	position: relative;
+	padding-left:365px;
+	width:270px;
 	height:400px;
-	background:transparent url(../img/devices.png) -30px 0 no-repeat
+}
+
+#intro .copy .bg {
+	position: absolute;
+	top: 0;
+	left: -28px;
+	background: transparent url(../img/content-background-main.png) 0px 0px no-repeat;
+	height: 331px;
+	width: 453px;
+	background-size: 100%;
 }
 
 /* first */
@@ -423,15 +433,25 @@ nav.floating .logo a {
 /* fifth */
 
 #fifth h2 {
-	width:600px;
-	color:#f90
+	width: 600px;
+	color: #7ac142
 }
 
 #fifth .copy {
+	position: relative;
 	padding-left:380px;
 	width:240px;
 	height:400px;
-	background:transparent url(../img/devices.png) -30px 0 no-repeat
+}
+
+#fifth .copy .bg {
+	position: absolute;
+	top: 0;
+	left: -30px;
+	background: transparent url(../img/content-background-main.png) 0px 0px no-repeat;
+	height: 351px;
+	width: 480px;
+	background-size: 100%;
 }
 
 #intro {
