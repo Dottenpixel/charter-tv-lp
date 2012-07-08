@@ -65,8 +65,8 @@ $(document).ready(function(){
 		});
 		tl.append(t2);
 		tl.stop();
-		page.bind("play_rb", function(e){ tl.play() });
-		page.bind("rev_rb", function(e){ tl.reverse() });
+		page.bind("full_view", function(e){ tl.play() });
+		page.bind("partial_view", function(e){ tl.reverse() });
 	}
 
 	makePageVertRainbow( $("#first") );
