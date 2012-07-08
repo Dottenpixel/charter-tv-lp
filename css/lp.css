@@ -201,10 +201,6 @@ nav li a:hover {
 	margin-top: 60px;
 }
 
-#intro h1 {
-	width:600px
-}
-
 #intro h2 {
 	width:600px;
 	color:#f90
@@ -238,17 +234,11 @@ nav li a:hover {
 
 /* second */
 
-#second h1 {
-	width:420px
-}
-
 #second h2 {
-	width:600px;
 	color:#f90
 }
 
 #second .copy {
-	width:680px;
 	height:250px;
 	background:transparent url(../img/streaming-devices.png) 160px 0 no-repeat
 }
@@ -314,10 +304,6 @@ nav li a:hover {
 
 /* third */
 
-#third h1 {
-	width:450px
-}
-
 #third h2 {
 	width:600px;
 	color:#6c0
@@ -359,10 +345,6 @@ nav li a:hover {
 
 
 /* fifth */
-
-#fifth h1 {
-	width:600px
-}
 
 #fifth h2 {
 	width:600px;
