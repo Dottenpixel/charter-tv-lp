@@ -286,7 +286,7 @@ nav.floating .logo a {
 }
 
 #first .channelLineup {
-	margin-top:40px;
+	margin-top: 0px;
 	width:605px;
 	height:75px;
 	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
@@ -476,6 +476,17 @@ nav.floating .logo a {
 	height: 351px;
 	width: 480px;
 	background-size: 100%;
+}
+
+.alt_services {
+	width: 195px;
+	margin: 140px 0 12px 0;
+	float: right;
+	font-size: 12px;
+	line-height: 16px;
+}
+.alt_services a {
+	display: block;
 }
 
 #intro {
