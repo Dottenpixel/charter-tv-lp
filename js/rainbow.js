@@ -76,6 +76,5 @@ $(document).ready(function(){
 	makePageVertRainbow( $("#third") );
 	makePageVertRainbow( $("#fourth") );
 	makeFinalRainbow( $("#fifth") );
-$(".cta").offset().top
-$("#fifth").offset().top
+
 });
