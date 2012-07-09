@@ -132,9 +132,25 @@ nav.floating a:link, nav.floating a:visited {
 	background: rgba(0,0,0,.1);
 }
 
+.lt-ie9.no-rgba nav.floating a:link,
+.lt-ie9.no-rgba nav.floating a:visited {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#11000000, endColorstr=#11000000)";
+}
+.lt-ie8.no-rgba nav.floating a:link,
+.lt-ie8.no-rgba nav.floating a:visited {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#11000000, endColorstr=#11000000);
+}
+
 nav.floating a:hover {
 	background: rgba(0,0,0,.33);
 	color:#fff
+}
+
+.lt-ie9.no-rgba nav.floating a:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000)";
+}
+.lt-ie8.no-rgba nav.floating a:hover {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
 }
 
 nav.floating a.active, nav.floating a.active:hover  {
