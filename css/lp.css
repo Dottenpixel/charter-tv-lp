@@ -253,7 +253,22 @@ nav.floating .logo a {
 	background: transparent url(../img/content-background-main.png) 0px 0px no-repeat;
 	height: 331px;
 	width: 453px;
+}
+.backgroundsize #intro .copy .bg,
+.backgroundsize #fifth .copy .bg {
 	background-size: 100%;
+}
+.no-backgroundsize #intro .copy .bg.modernized,
+.no-backgroundsize #fifth .copy .bg.modernized {
+	background: none;
+}
+.no-backgroundsize #intro .copy .bg img,
+.no-backgroundsize #fifth .copy .bg img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .tootip {

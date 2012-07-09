@@ -1,4 +1,16 @@
 $(document).ready(function(){
+	//Modernizr tweaks
+	if(!Modernizr.backgroundsize) {
+		$("#intro .copy .bg, #fifth .copy .bg").each(function(i,n){
+			el = $(n)
+			var imgsrc = el.css("backgroundImage");
+			var imgNode = $("<img>");
+			imgNode.attr( "src", imgsrc.replace(/^url\(["']?(.*?)["']?\)$/, "$1") );
+			el.addClass("modernized");
+			el.append(imgNode);
+		});
+	}
+
 	var positionContent = function() {
 		$(".page").css({ height : $(window).height() });
 		$(".page .content").each(function(i,n){
