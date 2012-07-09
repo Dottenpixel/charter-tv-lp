@@ -11,6 +11,16 @@ $(document).ready(function(){
 		});
 	}
 
+	if(!Modernizr.multiplebgs) {
+		$(".carousel.apps .app_links a").each(function(i,n){
+			el = $(n)
+			var shapeNode = $("<div>").addClass("shape");
+			var logoNode = $("<div>").addClass("logo");
+			var gleenNode = $("<div>").addClass("gleen");
+			el.append(shapeNode, logoNode, gleenNode);
+		});
+	}
+
 	var positionContent = function() {
 		$(".page").css({ height : $(window).height() });
 		$(".page .content").each(function(i,n){

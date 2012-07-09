@@ -407,8 +407,35 @@ nav.floating .logo a {
 	margin: 7px 15px;
 	font-size: 24px;
 	background: transparent no-repeat;
+}
+.multiplebgs .carousel.apps .app_links a {
 	background-image: url(../img/sprite.png), url(../img/sprite.png), url(../img/sprite.png);
 }
+.no-multiplebgs .carousel.apps .app_links a {
+	position: relative;
+}
+.no-multiplebgs .carousel.apps .app_links div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/sprite.png);
+}
+.no-multiplebgs .carousel.apps .app_links div.shape { background-position: -60px 0px; }
+.no-multiplebgs .carousel.apps .app_links div.gleen { background-position: 0px 0px; }
+
+.no-multiplebgs .carousel.apps .app_links a.btn2go div.logo		{ background-position: -120px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.cnn div.logo		{ background-position: -180px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.epix div.logo		{ background-position: -240px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.espn3 div.logo		{ background-position: -300px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.hbogo div.logo		{ background-position: -360px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.maxgo div.logo		{ background-position: -420px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.tbs div.logo		{ background-position: -480px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.tnt div.logo		{ background-position: -540px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.toon div.logo		{ background-position: -600px 0px; }
+.no-multiplebgs .carousel.apps .app_links a.trutv div.logo		{ background-position: -660px 0px; }
+
 
 .carousel.apps .app_links a.btn2go 			{ background-position: 0px 0px, -120px 0px, -60px 0px; }
 .carousel.apps .app_links a.cnn 			{ background-position: 0px 0px, -180px 0px, -60px 0px; }
