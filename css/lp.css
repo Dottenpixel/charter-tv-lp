@@ -235,8 +235,8 @@ nav.floating .logo a {
 }
 
 #intro h2 {
-	width:600px;
-	color:#f90
+	width: 600px;
+	color: #7ac142
 }
 
 #intro .copy {
@@ -423,7 +423,7 @@ nav.floating .logo a {
 #third .copy {
 	width:680px;
 	height:300px;
-	background:transparent url(../img/on-demand-devices.png) 230px 0 no-repeat
+	background:transparent url(../img/on-demand-devices.png) 250px 0 no-repeat
 }
 
 #third .copy p {
@@ -433,7 +433,7 @@ nav.floating .logo a {
 #third .copy p.caption {
 	font-size:12px;
 	width: 360px;
-	margin:45px 0 0 277px;
+	margin:45px 0 0 297px;
 	color:#999;
 	line-height:14px;
 }
