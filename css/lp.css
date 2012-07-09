@@ -256,6 +256,24 @@ nav.floating .logo a {
 	background-size: 100%;
 }
 
+.tootip {
+	margin: 130px 0 0 0;
+	float: right;
+}
+
+.tootip p {
+	text-align: center;
+	margin: 0 0 12px 0;
+	font-size: 14px;
+}
+
+.tootip .arrow {
+	background: transparent url(../img/sprite.png) no-repeat 0px -250px;
+	width: 18px;
+	height: 18px;
+	margin: 0 auto;
+}
+
 /* first */
 
 

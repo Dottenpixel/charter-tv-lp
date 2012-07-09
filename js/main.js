@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	var positionContent = function() {
-		$(".page, .bg").css({ height : $(window).height() });
+		$(".page").css({ height : $(window).height() });
 		$(".page .content").each(function(i,n){
 			$(this).css({ 
 				//marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
