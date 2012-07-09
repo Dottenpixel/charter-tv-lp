@@ -286,12 +286,21 @@ nav.floating .logo a {
 }
 
 #first .channelLineup {
+	position: relative;
 	margin-top: 0px;
 	width:605px;
 	height:75px;
-	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
-	border:1px solid #ccc
+	border:1px solid #ccc;
+	overflow: hidden;
 }
+
+#first .channelLineup .carousel_area {
+	position: relative;
+	width: 4182px;
+	height:75px;
+	background: #fff url(../img/logos_hd.jpg) repeat-x left center;
+}
+
 
 /* second */
 
