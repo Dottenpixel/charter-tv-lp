@@ -4,7 +4,9 @@ $(document).ready(function(){
 		$(".page .content").each(function(i,n){
 			$(this).css({ 
 				//marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
-				paddingTop : (function(me){ console.log(me.height()); return "+" + ($(window).height() - me.height())/2 + "px"; })($(n))
+				paddingTop : (function(me){ 
+					var padding = ($(window).height() - me.height())/2;
+					return "+" + padding + "px"; })($(n))
 			});
 		});
 	}
