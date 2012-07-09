@@ -55,6 +55,8 @@ $(document).ready(function(){
 	var makeFinalRainbow = function( page ) {
 		var ctaH = $(".cta").offset().top + $(".cta").height();
 		$("#fifth .rainbow-layer .rainbow3.vert").css({ "height": ctaH });
+		$("#fifth .rainbow-layer .rainbow2.horz").css({ "top": $(".cta").offset().top });
+
 		console.log("faaaak", ctaH);
 		var tl = makePageVertRainbow( page );
 		var t1 = new TimelineMax();
