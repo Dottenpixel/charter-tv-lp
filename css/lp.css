@@ -407,7 +407,8 @@ nav.floating .logo a {
 #third h3 {
 	margin-bottom:20px;
 	font-family: GothamMedium, Helvetica, Arial, sans-serif;
-	font-size:15px
+	font-size:15px;
+	color: #666;
 }
 
 #third .copy {
@@ -422,10 +423,15 @@ nav.floating .logo a {
 
 #third .copy p.caption {
 	font-size:12px;
-	width: 200px;
+	width: 360px;
 	margin:45px 0 0 277px;
 	color:#999;
-	line-height:14px
+	line-height:14px;
+}
+
+.caption .small {
+	font-size: 10px;
+	line-height: 12px;
 }
 
 /* fourth */
