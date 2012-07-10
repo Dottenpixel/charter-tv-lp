@@ -240,8 +240,14 @@ nav.floating .logo a {
 	position:relative;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:15px;
-	color:#999;
+	color:#666;
 	line-height:19px
+}
+
+.small {
+	font-size: 8px;
+	line-height:11px;
+	color: #999;
 }
 
 /* intro */
@@ -351,12 +357,9 @@ nav.floating .logo a {
 	width: 550px
 }
 
-#second .copy p.caption {
-	font-size:12px;
+#second .copy p.caption.small {
 	width: 160px;
 	margin: 50px 0 0 110px;
-	color:#999;
-	line-height:14px
 }
 
 .carousel_header {
@@ -474,7 +477,7 @@ nav.floating .logo a {
 	margin-bottom:20px;
 	font-family: GothamMedium, Helvetica, Arial, sans-serif;
 	font-size:15px;
-	color: #666;
+	color: #333;
 }
 
 #third .copy {
@@ -487,17 +490,9 @@ nav.floating .logo a {
 	width: 270px
 }
 
-#third .copy p.caption {
-	font-size:12px;
+#third .copy p.small {
 	width: 360px;
 	margin:45px 0 0 297px;
-	color:#999;
-	line-height:14px;
-}
-
-.caption .small {
-	font-size: 10px;
-	line-height: 12px;
 }
 
 /* fourth */
