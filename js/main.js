@@ -39,8 +39,8 @@ $(document).ready(function(){
 		console.log(e, pId);
 	});
 	
-	var hd_carousel = new TimelineMax({ repeat: -1 }); //2019px is the width of the background image
-	hd_carousel.append( TweenMax.to( $('#first .channelLineup .carousel_area'), 40, { css: { left: "-2091px" }, ease: Linear.easeNone }));
+	var hd_carousel = new TimelineMax({ repeat: -1 }); //2112px is the width of the background image
+	hd_carousel.append( TweenMax.to( $('#first .channelLineup .carousel_area'), 40, { css: { left: "-2112px" }, ease: Linear.easeNone }));
 	hd_carousel.play();
 
 	$(".carousel_advance").bind("click", function(e){
