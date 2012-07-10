@@ -59,13 +59,13 @@ $(document).ready(function(){
 			if( parseFloat(carouselPos()) <= -($(".carousel.apps .app_links").width()-$(".carousel.apps .carousel_area").width()-120) ) {
 				carousel.append( linksHtml );
 			};
-			distance = "-=120px";
+			distance = "-=90px";
 		} else {
 			if( parseFloat(carouselPos()) >= 0 ) {
 				carousel.append( linksHtml );
-				carousel.css("left", "-=1200px");
+				carousel.css("left", "-="+(carousel.width()/2)+"px");
 			};
-			distance = "+=120px";
+			distance = "+=90px";
 		}
 		TweenMax.to( carousel, .5, { css: { left: distance }, overwrite: false });
 	});
