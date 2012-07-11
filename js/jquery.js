@@ -44,6 +44,8 @@ function inView(pos, element){
 			posPct = Math.round((pos-top)/height*100); //how much is hidden?
 			// posPct = Math.round(pos/(top+height)*100);
 			move(pos, height);
+			$this.trigger("partial_view_above");
+			$this.trigger("in_view");
 		}
 				
 		//full view
@@ -51,9 +53,10 @@ function inView(pos, element){
 			whereAmI = "full";
 			console.log($this.attr("id"), whereAmI);
 			move(pos, height);
-			$this.trigger("play_rb")
+			$this.trigger("play_rb");
 			$("nav.floating").trigger("page_change", $this.attr("id"));
-			$this.trigger("full_view")
+			$this.trigger("in_view")
+			$this.trigger("full_view");
 		}
 		
 		//below & in view
@@ -64,7 +67,8 @@ function inView(pos, element){
 			move(pos, height);
 			posPct < 50 ? $this.trigger("play_rb") : $this.trigger("rev_rb");
 			if (posPct < 25) $("nav.floating").trigger("page_change", $this.attr("id"));
-			$this.trigger("partial_view")
+			$this.trigger("in_view")
+			$this.trigger("partial_view");
 		}
 		console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
 		console.log($this.attr("id"), whereAmI, posPct + "%");

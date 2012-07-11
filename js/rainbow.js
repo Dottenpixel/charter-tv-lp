@@ -53,11 +53,27 @@ $(document).ready(function(){
 	}
 
 	var makeFinalRainbow = function( page ) {
-		var ctaH = $(".cta").offset().top + $(".cta").height();
-		$("#fifth .rainbow-layer .rainbow3.vert").css({ "height": ctaH });
-		$("#fifth .rainbow-layer .rainbow2.horz").css({ "top": $(".cta").offset().top });
+		var positionElements = function( init ){
+			var ctaPos = $(".cta").offset().top - $("#fifth").offset().top;
+			var ctaH =  ctaPos > 0 ? ctaPos + $(".cta").height() : "inherit";
 
-		console.log("faaaak", ctaH);
+			if (init) {
+				ctaPos = $(".cta").offset().top;
+				ctaH = ctaPos + $(".cta").height();
+			}
+			$("#fifth .rainbow-layer .rainbow3.vert").css({ "height": ctaH });
+			$("#fifth .rainbow-layer .rainbow2.horz").css({ "top": ctaPos })
+		}
+
+
+		$(window).resize(function(){
+			positionElements();
+		});
+		$("#fifth").bind("partial_view_above full_view", function(){
+			positionElements();
+		});
+
+		positionElements( true );
 		var tl = makePageVertRainbow( page );
 		var t1 = new TimelineMax();
 		var t2 = new TimelineMax();
@@ -67,7 +83,7 @@ $(document).ready(function(){
 		});
 		tl.append(t2);
 		tl.stop();
-		page.bind("full_view", function(e){ tl.play() });
+		page.bind("partial_view_above full_view", function(e){ tl.play() });
 		page.bind("partial_view", function(e){ tl.reverse() });
 	}
 
