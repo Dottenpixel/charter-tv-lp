@@ -26,13 +26,16 @@ $(document).ready(function(){
 		var winMin = 600;
 		var pageH = (function(){
 			if(winH < winMin) { 
-				$("body").addClass("min_height");
+				$("body").addClass("min_page");
 				return winMin;
 			} else {
-				$("body").removeClass("min_height");
+				$("body").removeClass("min_page");
 				return winH;
 			}
 		})();
+		console.log(winH);
+		winH < 500 ? $("body").addClass("min_nav") : $("body").removeClass("min_nav");
+
 		$(".page").css({ height : pageH });
 		$(".page .content").each(function(i,n){
 			$(this).css({ 

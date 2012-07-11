@@ -190,9 +190,9 @@ nav.floating .logo a {
 	background: transparent url(../img/sprite.png) no-repeat 0 -60px;
 }
 
-.min_height nav.floating a:link, .min_height nav.floating a:visited { line-height: 28px }
-.min_height nav.floating .cta a { margin-top: 10px; line-height: 50px; }
-.min_height nav.floating .logo a { margin-top: 10px; }
+.min_nav nav.floating a:link, .min_nav nav.floating a:visited { line-height: 28px }
+.min_nav nav.floating .cta a { margin-top: 10px; line-height: 50px; }
+.min_nav nav.floating .logo a { margin-top: 10px; }
 
 
 .page {
@@ -538,8 +538,20 @@ nav.floating .logo a {
 
 #fifth .copy {
 	position: relative;
-	padding-left:380px;
-	width:240px;
+	padding-left: 360px;
+	width: 290px;
+}
+#fifth .copy p {
+	margin-top: 0;
+	background: rgba( 255, 255, 255, .8);
+	padding: 0 20px;
+}
+
+.lt-ie9.no-rgba #fifth .copy p {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+}
+.lt-ie8.no-rgba #fifth .copy p {
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF);
 }
 
 #fifth .copy .bg {
@@ -552,12 +564,13 @@ nav.floating .logo a {
 	background-size: 100%;
 }
 
-.alt_services {
+#fifth .copy p.alt_services {
 	width: 195px;
 	margin: 140px 0 12px 0;
 	float: right;
 	font-size: 12px;
 	line-height: 16px;
+	padding: 0;
 }
 .alt_services a {
 	display: block;
