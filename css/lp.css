@@ -161,7 +161,7 @@ nav.floating a.active, nav.floating a.active:hover  {
 
 nav.floating .cta a:link, nav.floating .cta a:visited {
 	display:block;
-	margin-top:37px;
+	margin-top: 37px;
 	padding: 0;
 	color:#fff;
 	background: #f90 url(../img/sprite.png) no-repeat 0px -195px;
@@ -189,6 +189,11 @@ nav.floating .logo a {
 	height: 61px;
 	background: transparent url(../img/sprite.png) no-repeat 0 -60px;
 }
+
+.min_height nav.floating a:link, .min_height nav.floating a:visited { line-height: 28px }
+.min_height nav.floating .cta a { margin-top: 10px; line-height: 50px; }
+.min_height nav.floating .logo a { margin-top: 10px; }
+
 
 .page {
 	background: #fff 50% 0 no-repeat fixed;
@@ -265,7 +270,6 @@ nav.floating .logo a {
 	position: relative;
 	padding-left:365px;
 	width:270px;
-	height:400px;
 }
 
 #intro .copy .bg {
@@ -294,7 +298,7 @@ nav.floating .logo a {
 }
 
 .tootip {
-	margin: 130px 0 0 0;
+	margin: 100px 0 0 0;
 	float: right;
 }
 
@@ -519,7 +523,9 @@ nav.floating .logo a {
 }
 
 /* fifth */
-
+#fifth .heading {
+	margin-top: 40px;
+}
 #fifth h2 {
 	width: 600px;
 	color: #7ac142
@@ -529,7 +535,6 @@ nav.floating .logo a {
 	position: relative;
 	padding-left:380px;
 	width:240px;
-	height:400px;
 }
 
 #fifth .copy .bg {

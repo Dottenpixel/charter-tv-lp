@@ -22,12 +22,23 @@ $(document).ready(function(){
 	}
 
 	var positionContent = function() {
-		$(".page").css({ height : $(window).height() });
+		var winH = $(window).height();
+		var winMin = 600;
+		var pageH = (function(){
+			if(winH < winMin) { 
+				$("body").addClass("min_height");
+				return winMin;
+			} else {
+				$("body").removeClass("min_height");
+				return winH;
+			}
+		})();
+		$(".page").css({ height : pageH });
 		$(".page .content").each(function(i,n){
 			$(this).css({ 
 				//marginLeft : (function(me){ console.log(me, me.width()); return -me.width()/2 + "px"; })($(n)),
 				paddingTop : (function(me){ 
-					var padding = ($(window).height() - me.height())/2;
+					var padding = (pageH - me.height())/2;
 					return "+" + padding + "px"; })($(n))
 			});
 		});
@@ -74,6 +85,7 @@ $(document).ready(function(){
 	RepositionNav();
 	
 	$(window).resize(function(){
+		console.log($(window).height());
 		positionContent();
 		RepositionNav();
 	});	
