@@ -152,6 +152,7 @@ nav.floating a:hover {
 .lt-ie8.no-rgba nav.floating a:hover {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000, endColorstr=#66000000);
 }
+.lt-ie9.no-rgba nav.floating .logo a { filter: none; }
 
 nav.floating a.active, nav.floating a.active:hover  {
 	background:#000;
