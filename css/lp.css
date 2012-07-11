@@ -258,7 +258,7 @@ nav.floating .logo a {
 /* intro */
 
 #intro .heading {
-	margin-top: 80px;
+	margin-top: 20px;
 }
 
 #intro h2 {
@@ -270,6 +270,10 @@ nav.floating .logo a {
 	position: relative;
 	padding-left:365px;
 	width:270px;
+}
+
+#intro .copy p {
+	margin: 0;
 }
 
 #intro .copy .bg {
@@ -358,7 +362,7 @@ nav.floating .logo a {
 }
 
 #second .copy p.small {
-	width: 550px
+	width: 600px
 }
 
 #second .copy p.caption.small {
@@ -369,7 +373,7 @@ nav.floating .logo a {
 .carousel_header {
 	font-weight: normal;
 	font-size: 15px;
-	margin: 25px 0 3px 0;
+	margin: 132px 0 3px 0;
 	width: 605px;
 }
 
