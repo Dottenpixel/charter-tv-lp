@@ -493,7 +493,7 @@ nav.floating .logo a {
 #third .copy {
 	width:680px;
 	height:300px;
-	background:transparent url(../img/on-demand-devices.png) 250px 0 no-repeat
+	background:transparent url(../img/on-demand-devices.png) 265px 0 no-repeat
 }
 
 #third .copy p {
@@ -501,8 +501,8 @@ nav.floating .logo a {
 }
 
 #third .copy p.small {
-	width: 360px;
-	margin:45px 0 0 297px;
+	width: 330px;
+	margin: 45px 0 0 310px;
 }
 
 /* fourth */
