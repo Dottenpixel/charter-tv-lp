@@ -18,6 +18,7 @@ function RepositionNav(){
 	var newtop = windowCenter - navHeight;
 	newtop = newtop < $("nav.top").height()+5 ? $("nav.top").height()+5 : newtop;
 	$('nav.floating').css({"top": newtop, "left": $("#intro .content").offset().left + $("#intro .content").width() + 10 }); //set the new top position of the navigation list
+	$("nav.floating").fadeIn(250);
 }
 
 
