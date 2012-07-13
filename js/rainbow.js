@@ -2,48 +2,40 @@ $(document).ready(function(){
 
 	var durMin = .75;
 	var durMax = 1.5;
+	var dur = function( min, max ) {
+		return min + Math.random()*(max-min)
+	}
 
-	var tl = new TimelineMax();
-	var t1 = new TimelineMax();
-	var t2 = new TimelineMax();
-	var t3 = new TimelineMax();
+	var makeIntroRainbow = function( page ){
 
-	//tl.staggerTo( $(".beams"), function(){ return durMin + Math.random()*(durMax-durMin) }, { css: { height: "100%" }, ease: Linear.easeNone }, 0 )
-	    
-	$("#intro .rainbow-layer .rainbow1.vert .beam").each(function(i,n){
-	    var dur = durMin + Math.random()*(durMax-durMin);
-	    t1.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { height: "100%" }, delay: (function(){ return durMin + Math.random()*(durMax-durMin) })(), ease: Linear.easeNone }));
-	});
-	$("#intro .rainbow-layer .horz .beam").each(function(i,n){
-	    var dur = durMin + Math.random()*(durMax-durMin);
-	    t2.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { width: "100%" }, ease: Linear.easeNone }));
-	});
-	$("#intro .rainbow-layer .rainbow3.vert .beam").each(function(i,n){
-	    var dur = durMin + Math.random()*(durMax-durMin);
-	    t3.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { height: "100%" }, delay: (function(){ return durMin + Math.random()*(durMax-durMin) })(), ease: Linear.easeNone }));
-	});
+		var tl = new TimelineMax();
+		var t1 = new TimelineMax();
+		var t2 = new TimelineMax();
+		var t3 = new TimelineMax();
+    
+		$(".rainbow-layer .rainbow1.vert .beam", page).each(function(i,n){
+		    t1.insert(TweenMax.to( n, dur(durMin,durMax)/2, { css: { height: "100%" }, delay: dur(durMin,durMax)/4, ease: Linear.easeNone }));
+		});
+		$(".rainbow-layer .horz .beam", page).each(function(i,n){
+		    t2.insert(TweenMax.to( n, dur(durMin,durMax), { css: { width: "100%" }, ease: Linear.easeNone }));
+		});
+		$(".rainbow-layer .rainbow3.vert .beam", page).each(function(i,n){
+		    t3.insert(TweenMax.to( n, dur(durMin,durMax)*1.5, { css: { height: "100%" }, delay: dur(durMin,durMax)/4, ease: Linear.easeNone }));
+		});
 
-	// $("#intro .rainbow-layer .vert .beam").each(function(i,n){
-	//     var dur = durMin + Math.random()*(durMax-durMin)
-	//         t1.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { height: "100%" }, delay: (function(){ return durMin + Math.random()*(durMax-durMin) })(), ease: Linear.easeNone }));
-	// });
-	// $("#intro .rainbow-layer .horz .beam").each(function(i,n){
-	//     var dur = durMin + Math.random()*(durMax-durMin)
-	//         t2.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { width: "100%" }, ease: Linear.easeNone }));
-	// });
-	tl.append(t1);
-	tl.append(t2);
-	tl.append(t3);
-	tl.play();
-	$("#intro .rainbow-layer button[name='play']").click(function(){ tl.play(); });
-	$("#intro .rainbow-layer button[name='reverse']").click(function(){ tl.reverse(); });
+		tl.append(t1);
+		tl.append(t2);
+		tl.append(t3);
+		tl.play();
+		$(".rainbow-layer button[name='play']", page).click(function(){ tl.play(); });
+		$(".rainbow-layer button[name='reverse']", page).click(function(){ tl.reverse(); });
+	}
 
 	var makePageVertRainbow = function( page ) {
 		var tl = new TimelineMax();
 		var tll = new TimelineMax();
 		$(".rainbow-layer .rainbow3.vert .beam", page).each(function(i,n){
-		    var dur = durMin + Math.random()*(durMax-durMin)
-		    tll.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { height: "100%" }, delay: (function(){ return durMin + Math.random()*(durMax-durMin) })(), ease: Linear.easeNone }));
+		    tll.insert(TweenMax.to( n, dur(durMin,durMax)*2, { css: { height: "100%" }, delay: dur(durMin,durMax)/4, ease: Linear.easeNone }));
 		});
 		tl.append(tll);
 		tl.stop();
@@ -61,32 +53,35 @@ $(document).ready(function(){
 				ctaPos = $(".cta").offset().top;
 				ctaH = ctaPos + $(".cta").height();
 			}
-			$("#fifth .rainbow-layer .rainbow3.vert").css({ "height": ctaH });
-			$("#fifth .rainbow-layer .rainbow2.horz").css({ "top": ctaPos })
+			$(".rainbow-layer .rainbow3.vert", page).css({ "height": ctaH });
+			$(".rainbow-layer .rainbow2.horz", page).css({ "top": ctaPos })
 		}
 
 
 		$(window).resize(function(){
 			positionElements();
 		});
-		$("#fifth").bind("partial_view_above full_view", function(){
+		page.bind("partial_view_above full_view", function(){
 			positionElements();
 		});
 
 		positionElements( true );
-		var tl = makePageVertRainbow( page );
+		var tl = new TimelineMax();
 		var t1 = new TimelineMax();
 		var t2 = new TimelineMax();
-		$(".rainbow-layer .rainbow2.horz .beam", page).each(function(i,n){
-			var dur = durMin + Math.random()*(durMax-durMin);
-	    	t2.insert(TweenMax.to( n, (function(){ return durMin + Math.random()*(durMax-durMin) })(), { css: { width: "100%" }, ease: Linear.easeNone }));
+		$(".rainbow-layer .rainbow3.vert .beam", page).each(function(i,n){
+		    t1.insert(TweenMax.to( n, dur(durMin,durMax), { css: { height: "100%" }, delay: dur(durMin,durMax)/4, ease: Linear.easeNone }));
 		});
+		$(".rainbow-layer .rainbow2.horz .beam", page).each(function(i,n){
+	    	t2.insert(TweenMax.to( n, dur(durMin,durMax), { css: { width: "100%" }, ease: Linear.easeNone }));
+		});
+		tl.append(t1);
 		tl.append(t2);
 		tl.stop();
 		page.bind("partial_view_above full_view", function(e){ tl.play() });
 		page.bind("partial_view", function(e){ tl.reverse() });
 	}
-
+	makeIntroRainbow( $("#intro") );
 	makePageVertRainbow( $("#first") );
 	makePageVertRainbow( $("#second") );
 	makePageVertRainbow( $("#third") );
