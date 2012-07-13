@@ -52,7 +52,7 @@ function inView(pos, element){
 		//full view
 		if(top <= pos && (top + height) >= pos && (top - windowHeight) <= pos && top + height - windowHeight >= pos){
 			whereAmI = "full";
-			console.log($this.attr("id"), whereAmI);
+			//console.log($this.attr("id"), whereAmI);
 			move(pos, height);
 			$this.trigger("play_rb");
 			$("nav.floating").trigger("page_change", $this.attr("id"));
@@ -71,9 +71,9 @@ function inView(pos, element){
 			$this.trigger("in_view")
 			$this.trigger("partial_view");
 		}
-		console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
-		console.log($this.attr("id"), whereAmI, posPct + "%");
-		console.log("________________________");
+		//console.log("top", top, "pos", pos, "height", height, "windowHeight", windowHeight);
+		//console.log($this.attr("id"), whereAmI, posPct + "%");
+		//console.log("________________________");
 	});
 }		
 		
@@ -101,7 +101,7 @@ function inView(pos, element){
 		}
 		
 		$window.bind('scroll', function(){ //when the user is scrolling...
-			console.log($this.attr("id"), $window.scrollTop(), $this.offset().top);
+			//console.log($this.attr("id"), $window.scrollTop(), $this.offset().top);
 			var pos = $window.scrollTop(); //position of the scrollbar
 			inView(pos, $this);
 			
@@ -146,7 +146,7 @@ $(document).ready(function(){
 				return winH;
 			}
 		})();
-		console.log(winH);
+		//console.log(winH);
 		winH < 500 ? $("body").addClass("min_nav") : $("body").removeClass("min_nav");
 
 		$(".page").css({ height : pageH });
@@ -163,7 +163,7 @@ $(document).ready(function(){
 
 	$('nav.floating').localScroll(800).bind("page_change", function(e, pId){
 		$("a", this).removeClass("active").filter("[href='#"+pId+"']").addClass("active");
-		console.log(e, pId);
+		//console.log(e, pId);
 	});
 	
 	var hd_carousel = new TimelineMax({ repeat: -1 }); //2112px is the width of the background image
@@ -201,7 +201,7 @@ $(document).ready(function(){
 	RepositionNav();
 	
 	$(window).resize(function(){
-		console.log($(window).height());
+		//console.log($(window).height());
 		positionContent();
 		RepositionNav();
 	});	
